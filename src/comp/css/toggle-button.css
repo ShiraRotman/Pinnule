@@ -1,0 +1,34 @@
+
+.toggle-button 
+{ cursor: pointer; background-color: #EEEEEE; padding: 0.25rem; width: fit-content; }
+
+.toggle-button:hover { background-color: #DDDDDD; }
+.toggle-button > div { padding: 0.25rem; border: 1px dashed transparent; }
+.toggle-button:focus > div { border-color: black; }
+.toggle-button:focus { outline: none; }
+.toggled { border-style: inset; } .untoggled { border-style: outset; }
+.disabled { cursor: not-allowed; } .button-wrapper { width: fit-content; }
+
+.disabled .toggle-button
+{ 
+	pointer-events: none;
+	filter: opacity(25%); -web-kit-filter: opacity(25%);
+}
+
+@-moz-document url-prefix()
+{
+	.toggle-button,.button-wrapper { width: -moz-fit-content; }
+	.untoggled
+	{
+		border-right: 3px solid #9A9A9A;
+		border-bottom: 3px solid #9A9A9A;
+		border-left: none; border-top: none;
+	}
+	
+	.toggled
+	{
+		border-left: 3px solid #9A9A9A;
+		border-top: 3px solid #9A9A9A;
+		border-right: none; border-bottom: none;
+	}
+}

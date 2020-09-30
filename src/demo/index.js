@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import PinnuleDemo from "./demo-components.js";
 
-function PinnuleDemo() 
-{ return "Demos will be added here as components are developed..."; }
-
-ReactDOM.render(<React.StrictMode><PinnuleDemo/></React.StrictMode>,document.
-		getElementById("componentsDemoRoot"));
+ReactDOM.render(
+	<React.StrictMode>
+		<PinnuleDemo header="Components"/>
+	</React.StrictMode>,
+	document.getElementById("componentsDemoRoot")
+);
